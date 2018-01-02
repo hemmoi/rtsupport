@@ -64,3 +64,7 @@ li{
 a{
   cursor: pointer;
 }
+
+a:hover, a:focus {
+  text-decoration: none !important;
+}
