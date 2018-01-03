@@ -8,7 +8,7 @@ class MessagesSection extends Component {
         return (
             <div className='support panel panel-primary'>
                 <div className='panel-heading'>
-                    <strong>Heading</strong>
+                    <strong>{this.props.activeChannel.name}</strong>
                 </div>
                 <div className='panel-body messages'>
                     <MessagesList {...this.props}/>
@@ -23,6 +23,7 @@ class MessagesSection extends Component {
 MessagesSection.propTypes = {
     addMessage: PropTypes.func.isRequired,
     messages: PropTypes.array.isRequired,
+    activeUser: PropTypes.object.isRequired
 }
 
 export default MessagesSection

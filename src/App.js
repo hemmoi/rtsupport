@@ -41,9 +41,9 @@ class App extends Component {
     this.setState({activeChannel})
   }
 
-  addMessage(content) {
+  addMessage(time, user, content, channel) {
     const {messages} = this.state;
-    messages.push({id: messages.length, content});
+    messages.push({id: messages.length, time, user, content, channel});
     this.setState({messages});
   }
 

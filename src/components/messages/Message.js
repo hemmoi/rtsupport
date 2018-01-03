@@ -7,6 +7,8 @@ class Message extends Component {
         const {message} = this.props;
         return (
             <li >
+                {message.user}
+                {message.time}
                 {message.content}
             </li>
         )
