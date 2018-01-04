@@ -6,10 +6,18 @@ class Message extends Component {
     render() {
         const {message} = this.props;
         return (
-            <li >
-                {message.user}
-                {message.time}
-                {message.content}
+            <li className="message">
+                <div className="author">
+                    <strong>
+                        {message.user}
+                    </strong>
+                    <i className="timestamp">
+                        {message.time}
+                    </i>
+                </div>
+                <div className="body">
+                    {message.content}
+                </div>
             </li>
         )
 

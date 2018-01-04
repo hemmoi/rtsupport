@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 class MessagesSection extends Component {
     render() {
         return (
-            <div className='support panel panel-primary'>
+            <div className='messages-container panel panel-primary'>
                 <div className='panel-heading'>
                     <strong>{this.props.activeChannel.name}</strong>
                 </div>

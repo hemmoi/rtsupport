@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import _ from 'lodash';
 
 class MessageForm extends Component {
     onSubmit(e) {
         e.preventDefault();
         const node = this.refs.message;
-        const message = node.value;
-        const time = moment().format('HH:mm DD/MM/YY');
+        const body = node.value;
         const {activeUser, activeChannel} = this.props;
         if (!_.isEmpty(activeUser) && !_.isEmpty(activeChannel)) {
             this
                 .props
-                .addMessage(time, activeUser.name, message, activeChannel.name);
+                .addMessage(body);
             node.value = '';
         }
     }
