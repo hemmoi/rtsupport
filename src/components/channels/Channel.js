@@ -16,7 +16,7 @@ class Channel extends Component {
                 <a onClick={this
                     .onClick
                     .bind(this)}>
-                    {channel.name}
+                    {channel.Name}
                 </a>
             </li>
         )
